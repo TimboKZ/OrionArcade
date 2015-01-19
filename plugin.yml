@@ -1,0 +1,91 @@
+name: OrionArcade
+version: 0.0.1
+description: Official RainbowArcade plugin
+author: Timbo_KZ
+
+main: kz.timbo.OrionArcade.OACore
+depend: [PermissionsEx]
+
+commands:
+    admin:
+      description: Admin command.
+      aliases: [a, /]
+
+    arrow:
+      description: Teleports you to Arrow hub
+      aliases: [arr]
+    deathmatch:
+      description: Teleports you to Deathmatch hub
+      aliases: [dm]
+    gungame:
+      description: Teleports you to GunGame hub
+      aliases: [gg]
+    mobarena:
+      description: Teleports you to Mob Arena hub
+      aliases: [ma]
+    parkour:
+      description: Teleports you to Parkour hub
+      aliases: [par]
+    spleef:
+      description: Teleports you to Spleef hub
+      aliases: [spl]
+    teamdeathmatch:
+      description: Teleports you to Team DeathMatch spawn
+      aliases: [tmdm, teamdm, tmdeathmatch]
+
+    leave:
+      description: Command to leave a game or a shop.
+      aliases: [l]
+
+permissions:
+    oa.*:
+      description: Gives access to everything in OrionArcade
+      children:
+        oa.admin: true
+
+    oa.admin.base:
+      description: Gives access to admin command list.
+      default: op
+
+    oa.pvp.attack:
+      description: Gives you the ability to randomly hit people.
+      default: op
+    oa.pvp.ignore:
+      description: Gives you the ability to ignore PvP from other players.
+      default: op
+    oa.pvp.bow:
+      description: Gives you the ability to shoot a bow.
+      default: op
+
+    oa.stats:
+      description: Default stats command.
+      default: true
+
+    oa.game.arrow:
+      description: Play Arrow.
+      default: true
+    oa.game.deathmatch:
+      description: Play Deathmatch.
+      default: true
+    oa.game.gungame:
+      description: Play GunGame.
+      default: true
+    oa.game.mobarena:
+      description: Play Mob Arena.
+      default: true
+    oa.game.parkour:
+      description: Do some Parkour.
+      default: true
+    oa.game.spleef:
+      description: Play Spleef.
+      default: true
+    oa.game.teamdm:
+      description: Play Team Deathmatch.
+      default: true
+
+    oa.chat.base:
+      description: Gives access to chat.
+      default: true
+    oa.chat.color:
+      description: Allows to use colors.
+      default: op
